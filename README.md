@@ -1,12 +1,15 @@
 # How to rund this app
 
-First install dependencies -- npm install
+First install dependencies:  
+npm install
 
-then run the db or server -- json-server --watch transaction.json 
+then run the db or server: 
+npm run mock:server 
 
-and run the app -- ng serve 
+and in another tab run the app:
+ng serve 
 
-Let me know is you have any question 
+Let me know is you have any questions 
 
 # Banktest
 
