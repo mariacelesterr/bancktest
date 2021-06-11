@@ -1,3 +1,13 @@
+# How to rund this app
+
+First install dependencies -- npm install
+
+then run the db or server -- json-server --watch transaction.json 
+
+and run the app -- ng serve 
+
+Let me know is you have any question 
+
 # Banktest
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
