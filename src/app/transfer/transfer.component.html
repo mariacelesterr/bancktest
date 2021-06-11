@@ -1,0 +1,72 @@
+<div class="header-list">
+  <div class="header-list-icon">
+    <img src="./assets/icons/arrows.png">
+  </div>
+  <div class="header-list-title">
+    <span>Make a Transfer</span>
+  </div>
+</div>
+       
+<form [formGroup]="form" class="form" > 
+
+  <div class="form-group">
+    <label for="fromAccount">FROM ACCOUNT</label>
+    <input 
+      type="text"
+      id="fromAccount"
+      disabled
+      value="Free Checking(4292) - $ {{balance}} ">
+  </div>
+  <div class="form-group">
+    <label for="toAccount">TO ACCOUNT</label>
+    <input 
+      type="text"
+      id="toAccount"
+      disabled
+      value="{{transaction.merchant.name}}"
+      >
+  </div>
+  <div class="form-group">
+    <label for="amount">AMOUNT</label>
+    <input
+      formControlName="amount"
+      type="number"
+      id="amount"
+      placeholder="$0.00"
+      class="formControl">
+  </div>
+  <button (click)="openModal('custom-modal-1')" class="submit"> submit</button>        
+</form>
+
+<jw-modal id="custom-modal-1">
+  <h1>Please confirm transaction</h1>
+    <div class="form-group">
+      <label for="fromAccount">FROM ACCOUNT</label>
+      <input type="text"
+        class="formControl"
+        disabled
+        value="Free Checking(4292) - $ {{balance}}"
+      >
+    </div>
+    <div class="form-group">
+      <label for="toAccount">TO ACCOUNT</label>
+      <input type="text"
+        class="formControl"
+        value="{{transaction.merchant.name}}" 
+        disabled
+        name=""  
+        id="">
+    </div>
+    <div class="form-group">
+      <label for="amount">AMOUNT</label>
+      <input type="text" 
+        class="formControl"
+        value="$ {{transaction.transaction.amountCurrency.amount }}"
+        disabled
+        name="" 
+        id="">
+    </div>
+
+  <button (click)="closeModal('custom-modal-1');">Cancel</button>
+  <button (click)="submit()">Transfer</button>
+</jw-modal>

@@ -1,0 +1,63 @@
+
+
+<div class="header-list">
+    <div class="header-list-icon">
+        <img src="./assets/icons/briefcase.png">
+    </div>
+    <div class= "header-list-title">
+        <p>
+            Recent Transactions 
+        </p> 
+    </div>
+</div> 
+<div class="search">
+  <div class="search-keyword">
+    <input type="text" name="keyword" [(ngModel)]="searchText" autocomplete="off" placeholder="Search by typing">
+  </div>
+  <div class="sortBy">
+    <div class="text">
+      <button type="submit" style="border: none;">
+        Sort by
+      </button>
+    </div>
+    <div class="search-date">
+      <button type="text" 
+        [class.active]="order === 'dates.Date'"
+        (click)="setOrder('dates.valueDate')"> 
+        DATE 
+      </button>
+    </div>
+    <div class="search-benefisiary">
+      <button type="menu" 
+      [class.active]="order === 'merchant.name'"
+      (click)="setOrder('merchant.name')"> BENEFISIARY </button>
+    </div>
+    <div class="search-amount">
+      <button type="menu"
+        [class.active]="order === 'transaction.amountCurrency.amount'"
+        (click)="setOrder('transaction.amountCurrency.amount')"> 
+        AMOUNT 
+    </button>
+    </div>
+  </div>
+</div>
+<ul class="mad-list">
+    <li *ngFor= "let items of transactions | filter:searchText  
+    | orderBy:order:reverse">
+      <div class="mad-list-date">
+        <span>{{items.dates.valueDate}}</span>
+      </div>
+      <div class="mad-list-icon">
+        <img class="mad-icon-24" src="./assets/icons/{{items.icon}}">
+      </div>
+      <div class="mad-list-text border-bottom">
+        <p>
+          <b>{{items.merchant.name}}</b><br>
+          {{items.transaction.type}}
+          <b style="float: right;">-${{items.transaction.amountCurrency.amount}}</b>
+        </p>
+      </div>
+    </li>
+</ul>
+  
+  

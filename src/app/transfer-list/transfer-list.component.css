@@ -1,0 +1,101 @@
+
+.header-list{
+    background-color: #14a2ba;
+    width:100%; 
+    position:absolute;
+    top:0;
+    left:0;
+    height: 60px;
+    display: flex;
+} 
+.header-list-icon{
+    flex: 1;
+    padding: 10px;
+} 
+.header-list-title{
+    margin-right: 500px;
+    color: white;
+}
+  [class^=mad-icon-]{
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    background: #999 50% / cover;
+    color: #fff;
+  }
+.search{
+  padding-top: 70px;
+}
+
+.sortBy{
+  float: right;
+  width: 40%;
+
+}
+
+  input {
+    font-size:12px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 240px;
+    border:none;
+    outline: none; 
+    border-bottom: 1px solid #757575;
+  }
+  input :focus{
+    outline:none;
+} 
+
+  button {
+    background-color:white;
+    border: .5px solid gray;
+    color:black;
+    padding: 5px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    float: left;
+  }
+  .mad-icon-24{
+    width:  50px;
+    height: 50px;
+  }
+  .mad-list-date{
+    width: 20%;
+  } 
+  ul.mad-list{
+    display: table;
+    width: 100%;
+    padding: 50px 0; 
+    margin: 0;
+    list-style: none;
+  }
+  ul.mad-list li{
+    display: table-row;
+  }
+  ul.mad-list li > *{
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+  }
+  ul.mad-list li > *:first-child{
+    padding-left: 16px;
+  }
+  ul.mad-list li > *:last-child{
+    padding-right: 16px;
+  }
+  ul.mad-list .mad-list-icon{
+    width: 72px; 
+  }
+  ul.mad-list .mad-list-text{
+    background: white;
+  }
+  ul.mad-list .mad-list-icon-secundary{
+    padding-left: 16px;
+    width: 1px; 
+    text-align: center; 
+  }
+  
+  .border-bottom{
+    border-bottom:1px solid rgba(0,0,0,0.1);
+  }
